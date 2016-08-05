@@ -1,6 +1,6 @@
 # sriov-createvf
 
-物理マシン起動時にSystemdからSR-IOV対応デバイスのバーチャルファンクションを作成します。
+物理マシン起動時にsystemdからSR-IOV対応デバイスのバーチャルファンクションを作成します。
 
 ## インストール
 
@@ -28,7 +28,7 @@ RHEL系は/etc/systemd/system/sriov-createvf.serviceのEnvironmentFileのパス�
 
     DEVICES="0000:08:00.0#2 0000:08:00.1#2"
 
-## Systemdで有効にする
+## systemdで有効にする
 
 systemctlコマンドで有効化します。
 
