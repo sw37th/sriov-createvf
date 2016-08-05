@@ -1,0 +1,7 @@
+# DEVICES takes PCI device codes and number of virtual function.
+# format) DOMAIN:BUS:DEVICE.FUNCTION#vf_num
+# e.g.) 
+#   DEVICES="0000:06:00.0#4"
+#   DEVICES="0000:08:00.0#2 0000:08:00.1#2"
+
+DEVICES=""

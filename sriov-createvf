@@ -1,0 +1,10 @@
+#!/bin/sh
+
+for dev in $@
+do
+    devnum=$(echo ${dev} | awk -F'#' '{print $1}')
+    vfnum=$(echo ${dev} | awk -F'#' '{print $2}')
+    if [ -e "/sys/bus/pci/devices/${devnum}/sriov_numvfs" ]; then
+        echo ${vfnum} > /sys/bus/pci/devices/${devnum}/sriov_numvfs
+    fi
+done

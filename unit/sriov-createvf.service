@@ -1,0 +1,16 @@
+[Unit]
+Description=Create Virtual Function devices
+After=syslog.target
+
+[Service]
+# for RHEL/CentOS/Scientific Linux
+#EnvironmentFile=-/etc/sysconfig/sriov-createvf
+# for Debian/Ubuntu
+#EnvironmentFile=-/etc/default/sriov-createvf
+EnvironmentFile=-/etc/default/sriov-createvf
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=-/usr/local/bin/sriov-createvf ${DEVICES}
+
+[Install]
+WantedBy=multi-user.target
